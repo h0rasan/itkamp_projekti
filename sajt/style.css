@@ -1,8 +1,10 @@
 * {
+
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -219,9 +221,7 @@ ul {
 }
 
 .container2 {
-    background-image: url(/images/index.png);
     display: flex;
-    background-repeat: no-repeat;
     justify-content: center;
     width: 99vw;
     padding: 100px 0;
@@ -229,6 +229,27 @@ ul {
 
 .about-content {
     display: flex;
+    position: relative;
+    z-index: 1;
+
+}
+
+.about-content .animation-img {
+    position: absolute;
+    z-index: -1;
+    animation: rotacija 25s infinite linear;
+    top: 540px;
+    left: -100px;
+}
+
+@keyframes rotacija {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .about-text {
@@ -256,9 +277,31 @@ ul {
 
 .about-btn {
     width: 120px;
-    height: 50px;
-    background-color: white;
-    text-decoration: none;
+    height: 35px;
     color: #f86011;
     font-size: 1.2rem;
+    border-bottom: 2px solid #f86011;
+    cursor: pointer;
+    transition: width 1.5s;
+}
+
+.about-btn:hover {
+    transition: width 150px;
+}
+
+.container3 {
+    margin-top: 40px;
+
+
+}
+
+.header-gallery-info {
+    display: flex;
+    width: 70vw;
+    padding: 100px 0;
+    justify-content: center;
+}
+
+.explore-discription {
+    display: flex;
 }
