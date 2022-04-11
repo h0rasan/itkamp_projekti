@@ -1,4 +1,5 @@
-* {
+*,
+::after {
 
     margin: 0%;
     padding: 0%;
@@ -8,6 +9,8 @@
 }
 
 .header {
+    position: sticky;
+    top: 0%;
     width: 100%;
     height: 80px;
     padding: 0 15%;
@@ -15,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 99999;
 }
 
 .main-logo {
@@ -290,18 +294,107 @@ ul {
 }
 
 .container3 {
+    width: 100%;
+    background-color: #fff8f5;
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
 
 
 }
 
 .header-gallery-info {
+    margin: auto;
     display: flex;
-    width: 70vw;
-    padding: 100px 0;
+    width: 100vw;
     justify-content: center;
 }
 
-.explore-discription {
+.gallery-info {
+    width: 70vw;
+    padding: 5%;
     display: flex;
+}
+
+.gallery-info h2 {
+    font-size: 2em;
+    color: #072366;
+}
+
+.explore-discription {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-discription p {
+    display: inline-block;
+    width: 30vw;
+    color: rgba(0, 0, 0, 0.683);
+    padding-left: 15%;
+}
+
+.explore-arrow {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 110px;
+    justify-content: space-between;
+}
+
+.explore-discription .arrow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #f86011;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f9f9f9bf;
+}
+
+.container3 img {
+    max-width: 33.33%;
+}
+
+.explore-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.explore-btn {
+    position: relative;
+    padding: 25px 45px;
+    background-color: white;
+    border: 1px solid #f86011;
+    font-weight: 550;
+    color: #f86011;
+    z-index: 1;
+    transition: transform 300ms ease-in;
+}
+
+.explore-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f86011;
+    color: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.explore-btn:hover::after {
+    transform: scaleY(1);
+    transform-origin: top;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+
 }
